@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Cucumber</title>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22ml-3%20ml-md-0%22%20viewBox%3D%220%200%2040.59%2046.31%22%20width%3D%2240.59%22%20height%3D%2246.31%22%3E%0A%20%20%20%20%3Cg%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%2323d96c%22%20fill-rule%3D%22evenodd%22%20d%3D%22M30.283%203.645q-.528-.317-1.08-.593a16.164%2016.164%200%2000-1.154-.518c-.124-.052-.247-.1-.372-.149-.343-.127-.689-.268-1.042-.371a19.427%2019.427%200%2010-9.792%2037.51v5.56c11.676-1.753%2022.016-10.979%2022.787-23.093.459-7.289-3.193-14.73-9.347-18.346z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%23173647%22%20d%3D%22M15.787%2046.307v-5.935A20.472%2020.472%200%201126.959%201.015c.274.08.557.187.832.291l.248.093c.165.064.291.113.417.167.348.137.739.313%201.208.543q.589.295%201.153.633c6.393%203.756%2010.354%2011.518%209.857%2019.316-.763%2012-10.722%2022.122-23.679%2024.067zm4.8-44.214h-.026a18.366%2018.366%200%2000-3.524%2036.408l.85.165v5.18c11.392-2.224%2020.009-11.272%2020.686-21.922.448-7.033-3.1-14.018-8.83-17.383l-.008-.005A14.691%2014.691%200%200027.654%203.5a5.74%205.74%200%2000-.344-.138l-.27-.1a9.49%209.49%200%2000-.708-.249%2018.425%2018.425%200%2000-5.743-.92z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%23173647%22%20fill-rule%3D%22evenodd%22%20d%3D%22M16.666%2010.58a1.8%201.8%200%20011.583.608%204.184%204.184%200%2001.728%201.107c.645%201.422%201.027%203.461.23%204.605a6.334%206.334%200%2001-3.981-3.087%203.236%203.236%200%2001-.347-1.339%201.957%201.957%200%20011.787-1.894zm-5.683%208.025a7.742%207.742%200%20001.218.737%205.789%205.789%200%20004.883-.138%206.116%206.116%200%2000-3.345-3.45%203.664%203.664%200%2000-1.442-.321%201.884%201.884%200%2000-.319%200%201.766%201.766%200%2000-.995%203.172zm6.1%203.433c-.777-.518-2.379-.309-3.312-.292a4.416%204.416%200%2000-1.666.352%203.5%203.5%200%2000-1.218.738%201.817%201.817%200%20001.409%203.171%203.3%203.3%200%20001.442-.321c1.436-.62%203.141-2.32%203.346-3.648zm2.61%202a6.556%206.556%200%2000-3.724%203.506%203.091%203.091%200%2000-.321%201.314%201.907%201.907%200%20003.3%201.346%207.422%207.422%200%2000.7-1.218c.621-1.333.866-3.72.046-4.948zm2.557-7.167a5.941%205.941%200%20003.7-3.167%203.243%203.243%200%2000.319-1.346%201.915%201.915%200%2000-1.794-1.954%201.832%201.832%200%2000-1.6.641%207.382%207.382%200%2000-.705%201.218c-.62%201.434-.842%203.48.081%204.603zm4.208%2012.115a3.244%203.244%200%2000-.321-1.345%205.869%205.869%200%2000-3.554-3.269%205.386%205.386%200%2000-.226%204.711%204.147%204.147%200%2000.7%201.121c1.133%201.23%203.505.32%203.402-1.218zm4.2-6.28a7.466%207.466%200%2000-1.217-.7%204.425%204.425%200%2000-1.666-.352%206.4%206.4%200%2000-3.188.555%205.959%205.959%200%20003.316%203.386%203.672%203.672%200%20001.442.32%201.8%201.8%200%20001.31-3.209z%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E">
+	<style>
+.cucumber-react .cucumber-status--passed {
+  color: #2CB14A;
+}
+.cucumber-react .cucumber-status--skipped {
+  color: #00A0CC;
+}
+.cucumber-react .cucumber-status--pending {
+  color: #FFAD33;
+}
+.cucumber-react .cucumber-status--undefined {
+  color: #FFAD33;
+}
+.cucumber-react .cucumber-status--ambiguous {
+  color: #F4EBFD;
+}
+.cucumber-react .cucumber-status--failed {
+  color: #BB0000;
+}
+.cucumber-react .cucumber-status--unknown {
+  color: #B6BECB;
+}
+.cucumber-react h1, .cucumber-react h2, .cucumber-react h3 {
+  padding: 0;
+  margin: 0;
+}
+.cucumber-react a {
+  color: inherit;
+}
+.cucumber-react .gherkin-document-list {
+  font: 14px "Open Sans", sans-serif;
+  color: #161C24;
+  background: #fff;
+  overflow-x: hidden;
+}
+.cucumber-react .cucumber-title {
+  margin-top: 0.3em;
+  margin-bottom: 0;
+  display: inline-block;
+}
+.cucumber-react .cucumber-title__keyword {
+  font-weight: bold;
+}
+.cucumber-react .cucumber-title__text {
+  font-weight: normal;
+}
+.cucumber-react .cucumber-tags {
+  padding: 0;
+  margin-bottom: 0;
+}
+.cucumber-react .cucumber-tags .cucumber-tag {
+  display: inline;
+  list-style-type: none;
+  padding: 4px 8px 4px 8px;
+  margin-right: 6px;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+}
+.cucumber-react .cucumber-feature__icon {
+  padding-top: 0.35em;
+  padding-right: 0.5em;
+}
+.cucumber-react .cucumber-description,
+.cucumber-react .cucumber-children {
+  margin-left: 1em;
+}
+.cucumber-react .cucumber-feature,
+.cucumber-react .cucumber-rule,
+.cucumber-react .cucumber-scenario,
+.cucumber-react .cucumber-background {
+  margin-bottom: 1em;
+}
+.cucumber-react .cucumber-steps {
+  list-style-type: none;
+  padding-left: 10px;
+}
+.cucumber-react .cucumber-steps .cucumber-step {
+  display: flex;
+}
+.cucumber-react .cucumber-steps .cucumber-step__status {
+  padding-top: 0.2em;
+  padding-right: 0.5em;
+}
+.cucumber-react .cucumber-steps .cucumber-step__content {
+  flex-grow: 1;
+  max-width: calc(100% - 1.5em);
+}
+.cucumber-react .cucumber-steps .cucumber-step__keyword {
+  font-weight: bold;
+}
+.cucumber-react .cucumber-steps .cucumber-step__text {
+  font-weight: normal;
+}
+.cucumber-react .cucumber-steps .cucumber-step__param {
+  font-weight: normal;
+  font-style: italic;
+}
+.cucumber-react .cucumber-table {
+  border-collapse: collapse;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.cucumber-react .cucumber-table__header-cell {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .cucumber-table__cell {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .cucumber-table__cell__status {
+  padding: 0.5em 3px 3px 3px;
+}
+.cucumber-react .cucumber-table__cell__step {
+  flex-grow: 1;
+}
+.cucumber-react .cucumber-code {
+  padding: 0.25em;
+  background-color: #ebebeb;
+}
+.cucumber-react .cucumber-error {
+  padding: 0.5em;
+  margin: 0;
+  overflow-x: auto;
+}
+.cucumber-react .cucumber-no-documents {
+  font: 14px "Open Sans", sans-serif;
+}
+.cucumber-react .cucumber-attachment__icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .cucumber-attachment__image {
+  max-width: 100%;
+  margin-top: 1em;
+}
+.cucumber-react .cucumber-attachment__text {
+  background-color: #ebebeb;
+  padding: 0.5em;
+  overflow-x: auto;
+}
+.cucumber-react .cucumber-anchor {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 0.3em;
+}
+.cucumber-react .cucumber-anchor__link {
+  opacity: 0;
+  transition: all 0.35s ease-in-out;
+  position: absolute;
+  left: -20px;
+  display: flex;
+  align-items: center;
+}
+.cucumber-react .cucumber-anchor__icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .cucumber-anchor:hover a {
+  opacity: 1;
+  width: max-content;
+  transition: all 0.35s ease-in-out;
+}
+.cucumber-react .cucumber-anchor > * {
+  height: 100%;
+  margin-top: 0px;
+}
+
+.cucumber-report-header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font: 11px "Open Sans", sans-serif;
+  margin-bottom: 1em;
+}
+.cucumber-report-header > * {
+  padding: 1em;
+}
+.cucumber-report-header .cucumber-status-filter {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cucumber-report-header .cucumber-status-filter table {
+  width: 100%;
+}
+.cucumber-report-header .cucumber-execution-data {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cucumber-report-header .cucumber-search-bar {
+  border-right: 0;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search input {
+  padding: 0.4em;
+  border-radius: 0;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search button {
+  height: 2.2em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+}
+.cucumber-report-header .cucumber-search-bar p.help {
+  font-size: 80%;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul {
+  display: inline;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li input {
+  display: inline-block;
+  width: auto;
+  height: 0.6em;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li label {
+  padding-right: 1em;
+}
+
+@media only screen and (min-width: 600px) {
+  .cucumber-report-header {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cucumber-report-header .cucumber-status-filter {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .cucumber-report-header .cucumber-search-bar {
+    grid-column: 1/-1;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .cucumber-report-header {
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+  .cucumber-report-header .cucumber-status-filter {
+    border-bottom: 0;
+  }
+  .cucumber-report-header .cucumber-execution-data {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 0;
+  }
+  .cucumber-report-header .cucumber-search-bar {
+    grid-column: auto;
+  }
+}
+.accordion {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+
+.accordion__item + .accordion__item {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.accordion__button {
+    background-color: #f4f4f4;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+}
+
+.accordion__button:hover {
+    background-color: #ddd;
+}
+
+.accordion__button:before {
+    display: inline-block;
+    content: '';
+    height: 10px;
+    width: 10px;
+    margin-right: 12px;
+    border-bottom: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    transform: rotate(-45deg);
+}
+
+.accordion__button[aria-expanded='true']::before,
+.accordion__button[aria-selected='true']::before {
+    transform: rotate(45deg);
+}
+
+.accordion__panel {
+    padding: 20px;
+    animation: fadein 0.35s ease-in;
+}
+
+	</style>
+</head>
+<body>
+<div id="content">
+</div>
+<script>
+window.CUCUMBER_MESSAGES = [{"meta":{"protocolVersion":"15.0.0","implementation":{"name":"cucumber-jvm","version":"6.10.4"},"runtime":{"name":"OpenJDK 64-Bit Server VM","version":"25.292-b10"},"os":{"name":"Mac OS X"},"cpu":{"name":"x86_64"}}},{"testRunStarted":{"timestamp":{"seconds":"1650447335","nanos":159000000}}},{"source":{"uri":"classpath:features/Login.feature","data":"@login\nFeature: Login to Stockbit website\n\n  Scenario Outline: User login with different cases\n    Given user click CTA login\n    When user input email \"\u003cemail\u003e\" and password \"\u003cpassword\u003e\"\n    And user click login button\n    Then user check the login status \"\u003cstatus\u003e\"\n    Examples:\n      | email                   | password    | status |\n      | klontongapp@gmail.com   | sajED301!ms | true   |\n      | klontongapp@gmail.com   | salahni84#  | false  |\n      | belum.daftar@gmail.com  | validPass!@ | false  |","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"classpath:features/Login.feature","feature":{"location":{"line":2,"column":1},"tags":[{"location":{"line":1,"column":1},"name":"@login","id":"8a4b6d6e-761b-4e91-ad13-1fab3d099cb9"}],"language":"en","keyword":"Feature","name":"Login to Stockbit website","children":[{"scenario":{"location":{"line":4,"column":3},"keyword":"Scenario Outline","name":"User login with different cases","steps":[{"location":{"line":5,"column":5},"keyword":"Given ","text":"user click CTA login","id":"775f5edd-49a3-4f3c-911a-7f145397afa5"},{"location":{"line":6,"column":5},"keyword":"When ","text":"user input email \"\u003cemail\u003e\" and password \"\u003cpassword\u003e\"","id":"c273406f-0217-4ae0-b1b9-81892c8312b9"},{"location":{"line":7,"column":5},"keyword":"And ","text":"user click login button","id":"f291390f-3f5e-4568-8777-63230d20a57c"},{"location":{"line":8,"column":5},"keyword":"Then ","text":"user check the login status \"\u003cstatus\u003e\"","id":"437a4bdf-0190-496e-a17b-e237527eb0f8"}],"examples":[{"location":{"line":9,"column":5},"keyword":"Examples","tableHeader":{"location":{"line":10,"column":7},"cells":[{"location":{"line":10,"column":9},"value":"email"},{"location":{"line":10,"column":35},"value":"password"},{"location":{"line":10,"column":49},"value":"status"}],"id":"70179a4b-6d31-4d5d-83a8-1261bf94d8ee"},"tableBody":[{"location":{"line":11,"column":7},"cells":[{"location":{"line":11,"column":9},"value":"klontongapp@gmail.com"},{"location":{"line":11,"column":35},"value":"sajED301!ms"},{"location":{"line":11,"column":49},"value":"true"}],"id":"6a01a384-86bb-4eb3-b5a1-d86d5f99ff09"},{"location":{"line":12,"column":7},"cells":[{"location":{"line":12,"column":9},"value":"klontongapp@gmail.com"},{"location":{"line":12,"column":35},"value":"salahni84#"},{"location":{"line":12,"column":49},"value":"false"}],"id":"684f3945-f86a-4ec1-8043-350d974b4701"},{"location":{"line":13,"column":7},"cells":[{"location":{"line":13,"column":9},"value":"belum.daftar@gmail.com"},{"location":{"line":13,"column":35},"value":"validPass!@"},{"location":{"line":13,"column":49},"value":"false"}],"id":"7f2b0859-98c0-4f46-ba5c-2ee3eaa61f6e"}],"id":"debd2d3a-ee77-4ff1-9c13-730b20f5cc3c"}],"id":"82ef13c0-ac24-4a7c-826e-6b7c3b2dc997"}}]}}},{"pickle":{"id":"64e9a31a-3aa5-4fe4-a0c2-bc0df26a8c8e","uri":"classpath:features/Login.feature","name":"User login with different cases","language":"en","steps":[{"text":"user click CTA login","id":"d6af63fc-4f5c-4e0b-ba30-80bdbd15fd89","astNodeIds":["775f5edd-49a3-4f3c-911a-7f145397afa5","6a01a384-86bb-4eb3-b5a1-d86d5f99ff09"]},{"text":"user input email \"klontongapp@gmail.com\" and password \"sajED301!ms\"","id":"c1849b7e-4968-4a11-9493-a686bb60e666","astNodeIds":["c273406f-0217-4ae0-b1b9-81892c8312b9","6a01a384-86bb-4eb3-b5a1-d86d5f99ff09"]},{"text":"user click login button","id":"5196af3d-100a-4dd3-be26-ed0f6b05c396","astNodeIds":["f291390f-3f5e-4568-8777-63230d20a57c","6a01a384-86bb-4eb3-b5a1-d86d5f99ff09"]},{"text":"user check the login status \"true\"","id":"453fe2cf-020d-4ab5-87ab-4e9f18048780","astNodeIds":["437a4bdf-0190-496e-a17b-e237527eb0f8","6a01a384-86bb-4eb3-b5a1-d86d5f99ff09"]}],"tags":[{"name":"@login","astNodeId":"8a4b6d6e-761b-4e91-ad13-1fab3d099cb9"}],"astNodeIds":["82ef13c0-ac24-4a7c-826e-6b7c3b2dc997","6a01a384-86bb-4eb3-b5a1-d86d5f99ff09"]}},{"pickle":{"id":"69054b50-faf2-4ea8-ab19-62a68e214ecb","uri":"classpath:features/Login.feature","name":"User login with different cases","language":"en","steps":[{"text":"user click CTA login","id":"39448d73-301c-4166-9a7b-c5dd04c3ab3a","astNodeIds":["775f5edd-49a3-4f3c-911a-7f145397afa5","684f3945-f86a-4ec1-8043-350d974b4701"]},{"text":"user input email \"klontongapp@gmail.com\" and password \"salahni84#\"","id":"e4c3e6f3-3d32-4847-8109-073fad6a9e6e","astNodeIds":["c273406f-0217-4ae0-b1b9-81892c8312b9","684f3945-f86a-4ec1-8043-350d974b4701"]},{"text":"user click login button","id":"70e82b1c-925f-4197-b803-a726f4bf3f17","astNodeIds":["f291390f-3f5e-4568-8777-63230d20a57c","684f3945-f86a-4ec1-8043-350d974b4701"]},{"text":"user check the login status \"false\"","id":"db8113e4-bf48-4b41-b9bb-9c53ed1e3935","astNodeIds":["437a4bdf-0190-496e-a17b-e237527eb0f8","684f3945-f86a-4ec1-8043-350d974b4701"]}],"tags":[{"name":"@login","astNodeId":"8a4b6d6e-761b-4e91-ad13-1fab3d099cb9"}],"astNodeIds":["82ef13c0-ac24-4a7c-826e-6b7c3b2dc997","684f3945-f86a-4ec1-8043-350d974b4701"]}},{"pickle":{"id":"da91f49f-c551-4664-a18e-26b4f44fbca1","uri":"classpath:features/Login.feature","name":"User login with different cases","language":"en","steps":[{"text":"user click CTA login","id":"66eafa7c-24b2-439f-ab9d-1d09561b7a54","astNodeIds":["775f5edd-49a3-4f3c-911a-7f145397afa5","7f2b0859-98c0-4f46-ba5c-2ee3eaa61f6e"]},{"text":"user input email \"belum.daftar@gmail.com\" and password \"validPass!@\"","id":"464783dc-46d2-4c43-9855-69e868caaf15","astNodeIds":["c273406f-0217-4ae0-b1b9-81892c8312b9","7f2b0859-98c0-4f46-ba5c-2ee3eaa61f6e"]},{"text":"user click login button","id":"5ded402d-55be-448f-bac3-a25802e42d25","astNodeIds":["f291390f-3f5e-4568-8777-63230d20a57c","7f2b0859-98c0-4f46-ba5c-2ee3eaa61f6e"]},{"text":"user check the login status \"false\"","id":"b28235c1-7cea-455f-b328-708746b36c78","astNodeIds":["437a4bdf-0190-496e-a17b-e237527eb0f8","7f2b0859-98c0-4f46-ba5c-2ee3eaa61f6e"]}],"tags":[{"name":"@login","astNodeId":"8a4b6d6e-761b-4e91-ad13-1fab3d099cb9"}],"astNodeIds":["82ef13c0-ac24-4a7c-826e-6b7c3b2dc997","7f2b0859-98c0-4f46-ba5c-2ee3eaa61f6e"]}},{"source":{"uri":"classpath:features/Register.feature","data":"Feature: Sign up an account to Stockbit\n\n  @failed-register\n  Scenario Outline: User register with all failed cases\n    Given user click CTA register\n    When user choose register with email\n    And user input name \"\u003cname\u003e\", email \"\u003cemail\u003e\", username \"\u003cusername\u003e\", password \"\u003cpassword\u003e\" and confirm password \"\u003cconfirm_password\u003e\"\n    And user click register button\n    Then user should be seen error message\n    Examples:\n      | name      | email                   | username      | password    | confirm_password |\n      | Rifky     | klontongapp@gmail.com   | hidegrumpy55  | Password22  | Password22       |\n      | Wahyu     | mau.daftar@gmail        | hidegrumpy55  | Password22  | Password22       |\n      | Pratama   | ingin.daftar@gmail.com  | prifkywahyu   | Password22  | Password22       |\n      | Bi-10!@$  | ingin.daftar@gmail.com  | hidegrumpy55  | Password22  | Password22       |\n      | Stockbit  | ingin.daftar@gmail.com  | hidegrumpy55  | Password22  | Password89       |","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"classpath:features/Register.feature","feature":{"location":{"line":1,"column":1},"language":"en","keyword":"Feature","name":"Sign up an account to Stockbit","children":[{"scenario":{"location":{"line":4,"column":3},"tags":[{"location":{"line":3,"column":3},"name":"@failed-register","id":"65fef7d5-0f4c-4104-87f6-d275d89e510b"}],"keyword":"Scenario Outline","name":"User register with all failed cases","steps":[{"location":{"line":5,"column":5},"keyword":"Given ","text":"user click CTA register","id":"d3a5dbb7-6860-4f60-b156-02d87e304a55"},{"location":{"line":6,"column":5},"keyword":"When ","text":"user choose register with email","id":"e8b2edc6-5627-40fb-a649-66638c74225f"},{"location":{"line":7,"column":5},"keyword":"And ","text":"user input name \"\u003cname\u003e\", email \"\u003cemail\u003e\", username \"\u003cusername\u003e\", password \"\u003cpassword\u003e\" and confirm password \"\u003cconfirm_password\u003e\"","id":"72976e7d-ec6e-4ee8-8f0e-20d2256a2257"},{"location":{"line":8,"column":5},"keyword":"And ","text":"user click register button","id":"9f6bb24c-15e8-4888-a7ea-3c791bb969b5"},{"location":{"line":9,"column":5},"keyword":"Then ","text":"user should be seen error message","id":"9fa13f55-828e-40a5-b46c-e52b4ed7fce5"}],"examples":[{"location":{"line":10,"column":5},"keyword":"Examples","tableHeader":{"location":{"line":11,"column":7},"cells":[{"location":{"line":11,"column":9},"value":"name"},{"location":{"line":11,"column":21},"value":"email"},{"location":{"line":11,"column":47},"value":"username"},{"location":{"line":11,"column":63},"value":"password"},{"location":{"line":11,"column":77},"value":"confirm_password"}],"id":"e01fa412-d00b-4da0-9e5f-cc23c9ab87c7"},"tableBody":[{"location":{"line":12,"column":7},"cells":[{"location":{"line":12,"column":9},"value":"Rifky"},{"location":{"line":12,"column":21},"value":"klontongapp@gmail.com"},{"location":{"line":12,"column":47},"value":"hidegrumpy55"},{"location":{"line":12,"column":63},"value":"Password22"},{"location":{"line":12,"column":77},"value":"Password22"}],"id":"c47d9257-b28a-46e1-a5a7-f8b87bd09a6a"},{"location":{"line":13,"column":7},"cells":[{"location":{"line":13,"column":9},"value":"Wahyu"},{"location":{"line":13,"column":21},"value":"mau.daftar@gmail"},{"location":{"line":13,"column":47},"value":"hidegrumpy55"},{"location":{"line":13,"column":63},"value":"Password22"},{"location":{"line":13,"column":77},"value":"Password22"}],"id":"f0f00d56-e7aa-433c-b5e6-08ea18cf6e97"},{"location":{"line":14,"column":7},"cells":[{"location":{"line":14,"column":9},"value":"Pratama"},{"location":{"line":14,"column":21},"value":"ingin.daftar@gmail.com"},{"location":{"line":14,"column":47},"value":"prifkywahyu"},{"location":{"line":14,"column":63},"value":"Password22"},{"location":{"line":14,"column":77},"value":"Password22"}],"id":"73da559a-4cf7-4849-bcd2-da97f94fb0fe"},{"location":{"line":15,"column":7},"cells":[{"location":{"line":15,"column":9},"value":"Bi-10!@$"},{"location":{"line":15,"column":21},"value":"ingin.daftar@gmail.com"},{"location":{"line":15,"column":47},"value":"hidegrumpy55"},{"location":{"line":15,"column":63},"value":"Password22"},{"location":{"line":15,"column":77},"value":"Password22"}],"id":"f8e0def2-ddc6-4787-bfc0-48cda4059ae3"},{"location":{"line":16,"column":7},"cells":[{"location":{"line":16,"column":9},"value":"Stockbit"},{"location":{"line":16,"column":21},"value":"ingin.daftar@gmail.com"},{"location":{"line":16,"column":47},"value":"hidegrumpy55"},{"location":{"line":16,"column":63},"value":"Password22"},{"location":{"line":16,"column":77},"value":"Password89"}],"id":"c3db0f76-ef5f-406b-b8b1-708d0f574d96"}],"id":"9449ea10-3f1b-4cdb-9342-252a9b6b5a8a"}],"id":"1898abbf-d666-4a11-af23-4f83b6d73bd5"}}]}}},{"pickle":{"id":"c42eeb43-fc3b-49ad-9499-566f38a406ca","uri":"classpath:features/Register.feature","name":"User register with all failed cases","language":"en","steps":[{"text":"user click CTA register","id":"bce2eb06-3d63-4cf4-b0a5-70e081573a75","astNodeIds":["d3a5dbb7-6860-4f60-b156-02d87e304a55","c47d9257-b28a-46e1-a5a7-f8b87bd09a6a"]},{"text":"user choose register with email","id":"605b0ab8-168d-42ff-bb95-026e7ed7213b","astNodeIds":["e8b2edc6-5627-40fb-a649-66638c74225f","c47d9257-b28a-46e1-a5a7-f8b87bd09a6a"]},{"text":"user input name \"Rifky\", email \"klontongapp@gmail.com\", username \"hidegrumpy55\", password \"Password22\" and confirm password \"Password22\"","id":"aafe4e55-c9c2-4b41-b563-d6cbc3440465","astNodeIds":["72976e7d-ec6e-4ee8-8f0e-20d2256a2257","c47d9257-b28a-46e1-a5a7-f8b87bd09a6a"]},{"text":"user click register button","id":"84bc03a0-3a2a-4e72-8ce1-c9ddfff1c7a9","astNodeIds":["9f6bb24c-15e8-4888-a7ea-3c791bb969b5","c47d9257-b28a-46e1-a5a7-f8b87bd09a6a"]},{"text":"user should be seen error message","id":"cc86f47c-ca40-45cf-850a-90cfa9e71d58","astNodeIds":["9fa13f55-828e-40a5-b46c-e52b4ed7fce5","c47d9257-b28a-46e1-a5a7-f8b87bd09a6a"]}],"tags":[{"name":"@failed-register","astNodeId":"65fef7d5-0f4c-4104-87f6-d275d89e510b"}],"astNodeIds":["1898abbf-d666-4a11-af23-4f83b6d73bd5","c47d9257-b28a-46e1-a5a7-f8b87bd09a6a"]}},{"pickle":{"id":"8e8739b4-b530-47b7-ad80-b5f8f991c30a","uri":"classpath:features/Register.feature","name":"User register with all failed cases","language":"en","steps":[{"text":"user click CTA register","id":"9060b38f-c774-431d-b21f-3b2c48f6b0f2","astNodeIds":["d3a5dbb7-6860-4f60-b156-02d87e304a55","f0f00d56-e7aa-433c-b5e6-08ea18cf6e97"]},{"text":"user choose register with email","id":"f0032661-fa80-482a-9d3b-17ee7b6cae92","astNodeIds":["e8b2edc6-5627-40fb-a649-66638c74225f","f0f00d56-e7aa-433c-b5e6-08ea18cf6e97"]},{"text":"user input name \"Wahyu\", email \"mau.daftar@gmail\", username \"hidegrumpy55\", password \"Password22\" and confirm password \"Password22\"","id":"47b9b05b-2940-412e-bdaa-556793945361","astNodeIds":["72976e7d-ec6e-4ee8-8f0e-20d2256a2257","f0f00d56-e7aa-433c-b5e6-08ea18cf6e97"]},{"text":"user click register button","id":"665f1756-a478-4754-85f5-942d8225cce5","astNodeIds":["9f6bb24c-15e8-4888-a7ea-3c791bb969b5","f0f00d56-e7aa-433c-b5e6-08ea18cf6e97"]},{"text":"user should be seen error message","id":"f08e21cc-1078-4c95-b6e8-f275b33901ae","astNodeIds":["9fa13f55-828e-40a5-b46c-e52b4ed7fce5","f0f00d56-e7aa-433c-b5e6-08ea18cf6e97"]}],"tags":[{"name":"@failed-register","astNodeId":"65fef7d5-0f4c-4104-87f6-d275d89e510b"}],"astNodeIds":["1898abbf-d666-4a11-af23-4f83b6d73bd5","f0f00d56-e7aa-433c-b5e6-08ea18cf6e97"]}},{"pickle":{"id":"d331e180-22b9-48ad-979a-5f8ed86d0c9f","uri":"classpath:features/Register.feature","name":"User register with all failed cases","language":"en","steps":[{"text":"user click CTA register","id":"8cd5fa1c-809f-436a-a0e4-0ea22a709592","astNodeIds":["d3a5dbb7-6860-4f60-b156-02d87e304a55","73da559a-4cf7-4849-bcd2-da97f94fb0fe"]},{"text":"user choose register with email","id":"acf52573-193c-4c77-8e8a-7c3957db72c4","astNodeIds":["e8b2edc6-5627-40fb-a649-66638c74225f","73da559a-4cf7-4849-bcd2-da97f94fb0fe"]},{"text":"user input name \"Pratama\", email \"ingin.daftar@gmail.com\", username \"prifkywahyu\", password \"Password22\" and confirm password \"Password22\"","id":"d9499270-9d13-4f23-82d4-4658fc886e95","astNodeIds":["72976e7d-ec6e-4ee8-8f0e-20d2256a2257","73da559a-4cf7-4849-bcd2-da97f94fb0fe"]},{"text":"user click register button","id":"c455f38e-7e19-43b5-adb6-e6eed7d288d6","astNodeIds":["9f6bb24c-15e8-4888-a7ea-3c791bb969b5","73da559a-4cf7-4849-bcd2-da97f94fb0fe"]},{"text":"user should be seen error message","id":"55911ecf-b373-408c-a048-c64fc987e9dc","astNodeIds":["9fa13f55-828e-40a5-b46c-e52b4ed7fce5","73da559a-4cf7-4849-bcd2-da97f94fb0fe"]}],"tags":[{"name":"@failed-register","astNodeId":"65fef7d5-0f4c-4104-87f6-d275d89e510b"}],"astNodeIds":["1898abbf-d666-4a11-af23-4f83b6d73bd5","73da559a-4cf7-4849-bcd2-da97f94fb0fe"]}},{"pickle":{"id":"710d339a-0666-428e-88c9-d8f54a396206","uri":"classpath:features/Register.feature","name":"User register with all failed cases","language":"en","steps":[{"text":"user click CTA register","id":"c3f65477-1f6e-4ffe-a321-cc2b632c6ef3","astNodeIds":["d3a5dbb7-6860-4f60-b156-02d87e304a55","f8e0def2-ddc6-4787-bfc0-48cda4059ae3"]},{"text":"user choose register with email","id":"4d656d12-c1e0-4fd3-9044-af372ffaf234","astNodeIds":["e8b2edc6-5627-40fb-a649-66638c74225f","f8e0def2-ddc6-4787-bfc0-48cda4059ae3"]},{"text":"user input name \"Bi-10!@$\", email \"ingin.daftar@gmail.com\", username \"hidegrumpy55\", password \"Password22\" and confirm password \"Password22\"","id":"c7a7d0c2-b07e-4698-9cdf-d853b68b13e7","astNodeIds":["72976e7d-ec6e-4ee8-8f0e-20d2256a2257","f8e0def2-ddc6-4787-bfc0-48cda4059ae3"]},{"text":"user click register button","id":"6e3df92f-8c12-40c6-9503-158923c719c7","astNodeIds":["9f6bb24c-15e8-4888-a7ea-3c791bb969b5","f8e0def2-ddc6-4787-bfc0-48cda4059ae3"]},{"text":"user should be seen error message","id":"2626ba65-5104-4d9e-9bfd-f3e594d2a4b3","astNodeIds":["9fa13f55-828e-40a5-b46c-e52b4ed7fce5","f8e0def2-ddc6-4787-bfc0-48cda4059ae3"]}],"tags":[{"name":"@failed-register","astNodeId":"65fef7d5-0f4c-4104-87f6-d275d89e510b"}],"astNodeIds":["1898abbf-d666-4a11-af23-4f83b6d73bd5","f8e0def2-ddc6-4787-bfc0-48cda4059ae3"]}},{"pickle":{"id":"fbcf6759-ecef-44e9-b3fe-2be47a59ba44","uri":"classpath:features/Register.feature","name":"User register with all failed cases","language":"en","steps":[{"text":"user click CTA register","id":"0799d9b0-d6e5-472a-a79a-1ac10ff2f2e9","astNodeIds":["d3a5dbb7-6860-4f60-b156-02d87e304a55","c3db0f76-ef5f-406b-b8b1-708d0f574d96"]},{"text":"user choose register with email","id":"d5c3cbe3-263b-435f-9389-5a5439eb939d","astNodeIds":["e8b2edc6-5627-40fb-a649-66638c74225f","c3db0f76-ef5f-406b-b8b1-708d0f574d96"]},{"text":"user input name \"Stockbit\", email \"ingin.daftar@gmail.com\", username \"hidegrumpy55\", password \"Password22\" and confirm password \"Password89\"","id":"ebdfee64-be16-44cd-9574-509a802f0603","astNodeIds":["72976e7d-ec6e-4ee8-8f0e-20d2256a2257","c3db0f76-ef5f-406b-b8b1-708d0f574d96"]},{"text":"user click register button","id":"7b11088b-2b94-469f-98ab-d5e4f1bf2710","astNodeIds":["9f6bb24c-15e8-4888-a7ea-3c791bb969b5","c3db0f76-ef5f-406b-b8b1-708d0f574d96"]},{"text":"user should be seen error message","id":"c72b6482-2fe9-498f-a97f-94e666c6a58a","astNodeIds":["9fa13f55-828e-40a5-b46c-e52b4ed7fce5","c3db0f76-ef5f-406b-b8b1-708d0f574d96"]}],"tags":[{"name":"@failed-register","astNodeId":"65fef7d5-0f4c-4104-87f6-d275d89e510b"}],"astNodeIds":["1898abbf-d666-4a11-af23-4f83b6d73bd5","c3db0f76-ef5f-406b-b8b1-708d0f574d96"]}},{"testCase":{"id":"71990924-6868-4b8e-8c16-2451f0354e72","pickleId":"64e9a31a-3aa5-4fe4-a0c2-bc0df26a8c8e","testSteps":[{"id":"faad16aa-e614-46bd-a29d-0ded8453b480","hookId":"ed90f464-eb37-4ab5-be58-4fb6500f2cd7"},{"id":"1b28472b-c9ce-4bcd-9072-bceb31312061","pickleStepId":"d6af63fc-4f5c-4e0b-ba30-80bdbd15fd89","stepDefinitionIds":["13ed6997-cc56-4765-a4d0-9abb4ee96e5f"],"stepMatchArgumentsLists":[{}]},{"id":"1dfa65cb-1896-4f33-b5fa-3f00aa68a952","pickleStepId":"c1849b7e-4968-4a11-9493-a686bb60e666","stepDefinitionIds":["ba75e1f8-6c1e-42d9-ad29-e1918eabfe62"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"string","group":{"start":17,"value":"\"klontongapp@gmail.com\"","children":[{"start":18,"value":"klontongapp@gmail.com","children":[{}]},{"children":[{}]}]}},{"parameterTypeName":"string","group":{"start":54,"value":"\"sajED301!ms\"","children":[{"start":55,"value":"sajED301!ms","children":[{}]},{"children":[{}]}]}}]}]},{"id":"df3f8d2c-ac80-4366-b46c-d05411f8f01e","pickleStepId":"5196af3d-100a-4dd3-be26-ed0f6b05c396","stepDefinitionIds":["df92832f-efb8-4a3d-8746-e18e2107a502"],"stepMatchArgumentsLists":[{}]},{"id":"7006ef23-ed1b-4053-9fa8-793a687b837e","pickleStepId":"453fe2cf-020d-4ab5-87ab-4e9f18048780","stepDefinitionIds":["4b0cf398-e125-4c02-a9ac-0e8a5f47ae46"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"string","group":{"start":28,"value":"\"true\"","children":[{"start":29,"value":"true","children":[{}]},{"children":[{}]}]}}]}]},{"id":"24c94b03-d2cc-434a-899b-4e8663040645","hookId":"3b910c49-9da5-45a4-beae-1f9c81674288"}]}},{"testCaseStarted":{"timestamp":{"seconds":"1650447335","nanos":618000000},"testCaseId":"71990924-6868-4b8e-8c16-2451f0354e72","id":"73ffd80d-0c1c-4b22-96b5-ba68f70943cb"}},{"testStepStarted":{"timestamp":{"seconds":"1650447335","nanos":626000000},"testStepId":"faad16aa-e614-46bd-a29d-0ded8453b480","testCaseStartedId":"73ffd80d-0c1c-4b22-96b5-ba68f70943cb"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"15","nanos":971000000}},"timestamp":{"seconds":"1650447351","nanos":597000000},"testStepId":"faad16aa-e614-46bd-a29d-0ded8453b480","testCaseStartedId":"73ffd80d-0c1c-4b22-96b5-ba68f70943cb"}},{"testStepStarted":{"timestamp":{"seconds":"1650447351","nanos":633000000},"testStepId":"1b28472b-c9ce-4bcd-9072-bceb31312061","testCaseStartedId":"73ffd80d-0c1c-4b22-96b5-ba68f70943cb"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"3","nanos":185000000}},"timestamp":{"seconds":"1650447354","nanos":818000000},"testStepId":"1b28472b-c9ce-4bcd-9072-bceb31312061","testCaseStartedId":"73ffd80d-0c1c-4b22-96b5-ba68f70943cb"}},{"testStepStarted":{"timestamp":{"seconds":"1650447354","nanos":819000000},"testStepId":"1dfa65cb-1896-4f33-b5fa-3f00aa68a952","testCaseStartedId":"73ffd80d-0c1c-4b22-96b5-ba68f70943cb"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"1","nanos":427000000}},"timestamp":{"seconds":"1650447356","nanos":246000000},"testStepId":"1dfa65cb-1896-4f33-b5fa-3f00aa68a952","testCaseStartedId":"73ffd80d-0c1c-4b22-96b5-ba68f70943cb"}},{"testStepStarted":{"timestamp":{"seconds":"1650447356","nanos":248000000},"testStepId":"df3f8d2c-ac80-4366-b46c-d05411f8f01e","testCaseStartedId":"73ffd80d-0c1c-4b22-96b5-ba68f70943cb"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"1","nanos":760000000}},"timestamp":{"seconds":"1650447358","nanos":8000000},"testStepId":"df3f8d2c-ac80-4366-b46c-d05411f8f01e","testCaseStartedId":"73ffd80d-0c1c-4b22-96b5-ba68f70943cb"}},{"testStepStarted":{"timestamp":{"seconds":"1650447358","nanos":12000000},"testStepId":"7006ef23-ed1b-4053-9fa8-793a687b837e","testCaseStartedId":"73ffd80d-0c1c-4b22-96b5-ba68f70943cb"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"13","nanos":635000000}},"timestamp":{"seconds":"1650447371","nanos":647000000},"testStepId":"7006ef23-ed1b-4053-9fa8-793a687b837e","testCaseStartedId":"73ffd80d-0c1c-4b22-96b5-ba68f70943cb"}},{"testStepStarted":{"timestamp":{"seconds":"1650447371","nanos":650000000},"testStepId":"24c94b03-d2cc-434a-899b-4e8663040645","testCaseStartedId":"73ffd80d-0c1c-4b22-96b5-ba68f70943cb"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"nanos":143000000}},"timestamp":{"seconds":"1650447371","nanos":793000000},"testStepId":"24c94b03-d2cc-434a-899b-4e8663040645","testCaseStartedId":"73ffd80d-0c1c-4b22-96b5-ba68f70943cb"}},{"testCaseFinished":{"timestamp":{"seconds":"1650447371","nanos":794000000},"testCaseStartedId":"73ffd80d-0c1c-4b22-96b5-ba68f70943cb"}},{"testCase":{"id":"5acf5c95-5387-4e18-aab5-d06306897442","pickleId":"69054b50-faf2-4ea8-ab19-62a68e214ecb","testSteps":[{"id":"a8f176e1-3040-453d-a11f-d42985fc5e44","hookId":"ed90f464-eb37-4ab5-be58-4fb6500f2cd7"},{"id":"d7841b40-595a-4bf6-9565-95b270088257","pickleStepId":"39448d73-301c-4166-9a7b-c5dd04c3ab3a","stepDefinitionIds":["d23c0558-32ef-47be-8a36-600ad7d3a518"],"stepMatchArgumentsLists":[{}]},{"id":"54a6afe4-ae35-4d27-a889-1b52af2d17aa","pickleStepId":"e4c3e6f3-3d32-4847-8109-073fad6a9e6e","stepDefinitionIds":["c35d8fbb-bd71-4542-8419-e06f4a6e569a"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"string","group":{"start":17,"value":"\"klontongapp@gmail.com\"","children":[{"start":18,"value":"klontongapp@gmail.com","children":[{}]},{"children":[{}]}]}},{"parameterTypeName":"string","group":{"start":54,"value":"\"salahni84#\"","children":[{"start":55,"value":"salahni84#","children":[{}]},{"children":[{}]}]}}]}]},{"id":"067b94a4-778c-4667-b294-6bbe677ceb10","pickleStepId":"70e82b1c-925f-4197-b803-a726f4bf3f17","stepDefinitionIds":["455fc0ed-ef5c-4b24-93b2-94edddb4c625"],"stepMatchArgumentsLists":[{}]},{"id":"fc2e5186-bebc-4cee-8af8-0a615c158589","pickleStepId":"db8113e4-bf48-4b41-b9bb-9c53ed1e3935","stepDefinitionIds":["a17d8387-824d-4d19-9022-ab2d3332fd9d"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"string","group":{"start":28,"value":"\"false\"","children":[{"start":29,"value":"false","children":[{}]},{"children":[{}]}]}}]}]},{"id":"7719fa09-e7f1-4f40-9b7b-77d2b07b1cce","hookId":"3b910c49-9da5-45a4-beae-1f9c81674288"}]}},{"testCaseStarted":{"timestamp":{"seconds":"1650447371","nanos":828000000},"testCaseId":"5acf5c95-5387-4e18-aab5-d06306897442","id":"cdade9a0-019a-4221-a36c-4e9896ba5187"}},{"testStepStarted":{"timestamp":{"seconds":"1650447371","nanos":832000000},"testStepId":"a8f176e1-3040-453d-a11f-d42985fc5e44","testCaseStartedId":"cdade9a0-019a-4221-a36c-4e9896ba5187"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"12","nanos":984000000}},"timestamp":{"seconds":"1650447384","nanos":816000000},"testStepId":"a8f176e1-3040-453d-a11f-d42985fc5e44","testCaseStartedId":"cdade9a0-019a-4221-a36c-4e9896ba5187"}},{"testStepStarted":{"timestamp":{"seconds":"1650447384","nanos":821000000},"testStepId":"d7841b40-595a-4bf6-9565-95b270088257","testCaseStartedId":"cdade9a0-019a-4221-a36c-4e9896ba5187"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"4","nanos":333000000}},"timestamp":{"seconds":"1650447389","nanos":154000000},"testStepId":"d7841b40-595a-4bf6-9565-95b270088257","testCaseStartedId":"cdade9a0-019a-4221-a36c-4e9896ba5187"}},{"testStepStarted":{"timestamp":{"seconds":"1650447389","nanos":160000000},"testStepId":"54a6afe4-ae35-4d27-a889-1b52af2d17aa","testCaseStartedId":"cdade9a0-019a-4221-a36c-4e9896ba5187"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"1","nanos":354000000}},"timestamp":{"seconds":"1650447390","nanos":514000000},"testStepId":"54a6afe4-ae35-4d27-a889-1b52af2d17aa","testCaseStartedId":"cdade9a0-019a-4221-a36c-4e9896ba5187"}},{"testStepStarted":{"timestamp":{"seconds":"1650447390","nanos":517000000},"testStepId":"067b94a4-778c-4667-b294-6bbe677ceb10","testCaseStartedId":"cdade9a0-019a-4221-a36c-4e9896ba5187"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"1","nanos":862000000}},"timestamp":{"seconds":"1650447392","nanos":379000000},"testStepId":"067b94a4-778c-4667-b294-6bbe677ceb10","testCaseStartedId":"cdade9a0-019a-4221-a36c-4e9896ba5187"}},{"testStepStarted":{"timestamp":{"seconds":"1650447392","nanos":384000000},"testStepId":"fc2e5186-bebc-4cee-8af8-0a615c158589","testCaseStartedId":"cdade9a0-019a-4221-a36c-4e9896ba5187"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"10","nanos":879000000}},"timestamp":{"seconds":"1650447403","nanos":263000000},"testStepId":"fc2e5186-bebc-4cee-8af8-0a615c158589","testCaseStartedId":"cdade9a0-019a-4221-a36c-4e9896ba5187"}},{"testStepStarted":{"timestamp":{"seconds":"1650447403","nanos":272000000},"testStepId":"7719fa09-e7f1-4f40-9b7b-77d2b07b1cce","testCaseStartedId":"cdade9a0-019a-4221-a36c-4e9896ba5187"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"nanos":82000000}},"timestamp":{"seconds":"1650447403","nanos":354000000},"testStepId":"7719fa09-e7f1-4f40-9b7b-77d2b07b1cce","testCaseStartedId":"cdade9a0-019a-4221-a36c-4e9896ba5187"}},{"testCaseFinished":{"timestamp":{"seconds":"1650447403","nanos":354000000},"testCaseStartedId":"cdade9a0-019a-4221-a36c-4e9896ba5187"}},{"testCase":{"id":"d0202f5b-9c66-49bf-b108-74a8a40b5dcf","pickleId":"da91f49f-c551-4664-a18e-26b4f44fbca1","testSteps":[{"id":"99073097-49a4-4515-b718-3d6feba080d5","hookId":"ed90f464-eb37-4ab5-be58-4fb6500f2cd7"},{"id":"90bf542e-7889-437b-b46d-4d76c9a0a5e5","pickleStepId":"66eafa7c-24b2-439f-ab9d-1d09561b7a54","stepDefinitionIds":["0b571372-15d0-4543-bc9c-33121205c789"],"stepMatchArgumentsLists":[{}]},{"id":"cad863c6-394a-49d8-baeb-e8a639e3163e","pickleStepId":"464783dc-46d2-4c43-9855-69e868caaf15","stepDefinitionIds":["9653a793-1368-43c4-9598-142a46ef1ab7"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"string","group":{"start":17,"value":"\"belum.daftar@gmail.com\"","children":[{"start":18,"value":"belum.daftar@gmail.com","children":[{}]},{"children":[{}]}]}},{"parameterTypeName":"string","group":{"start":55,"value":"\"validPass!@\"","children":[{"start":56,"value":"validPass!@","children":[{}]},{"children":[{}]}]}}]}]},{"id":"e27e1a24-63e6-4929-af69-c6dcfb1e2886","pickleStepId":"5ded402d-55be-448f-bac3-a25802e42d25","stepDefinitionIds":["5c93d844-3e07-47d7-a759-362e1bfd513e"],"stepMatchArgumentsLists":[{}]},{"id":"cf3f2e96-fc79-4ad8-9568-cc87138fa4cc","pickleStepId":"b28235c1-7cea-455f-b328-708746b36c78","stepDefinitionIds":["25121196-9321-4acc-8910-26e0c2b45f22"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"string","group":{"start":28,"value":"\"false\"","children":[{"start":29,"value":"false","children":[{}]},{"children":[{}]}]}}]}]},{"id":"4eede269-c3a4-489f-b704-5273f53b72ad","hookId":"3b910c49-9da5-45a4-beae-1f9c81674288"}]}},{"testCaseStarted":{"timestamp":{"seconds":"1650447403","nanos":375000000},"testCaseId":"d0202f5b-9c66-49bf-b108-74a8a40b5dcf","id":"9b0fe0c9-ff02-4eeb-b7dd-a9f4625e8112"}},{"testStepStarted":{"timestamp":{"seconds":"1650447403","nanos":376000000},"testStepId":"99073097-49a4-4515-b718-3d6feba080d5","testCaseStartedId":"9b0fe0c9-ff02-4eeb-b7dd-a9f4625e8112"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"17","nanos":384000000}},"timestamp":{"seconds":"1650447420","nanos":760000000},"testStepId":"99073097-49a4-4515-b718-3d6feba080d5","testCaseStartedId":"9b0fe0c9-ff02-4eeb-b7dd-a9f4625e8112"}},{"testStepStarted":{"timestamp":{"seconds":"1650447420","nanos":768000000},"testStepId":"90bf542e-7889-437b-b46d-4d76c9a0a5e5","testCaseStartedId":"9b0fe0c9-ff02-4eeb-b7dd-a9f4625e8112"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"2","nanos":778000000}},"timestamp":{"seconds":"1650447423","nanos":546000000},"testStepId":"90bf542e-7889-437b-b46d-4d76c9a0a5e5","testCaseStartedId":"9b0fe0c9-ff02-4eeb-b7dd-a9f4625e8112"}},{"testStepStarted":{"timestamp":{"seconds":"1650447423","nanos":547000000},"testStepId":"cad863c6-394a-49d8-baeb-e8a639e3163e","testCaseStartedId":"9b0fe0c9-ff02-4eeb-b7dd-a9f4625e8112"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"1","nanos":256000000}},"timestamp":{"seconds":"1650447424","nanos":803000000},"testStepId":"cad863c6-394a-49d8-baeb-e8a639e3163e","testCaseStartedId":"9b0fe0c9-ff02-4eeb-b7dd-a9f4625e8112"}},{"testStepStarted":{"timestamp":{"seconds":"1650447424","nanos":804000000},"testStepId":"e27e1a24-63e6-4929-af69-c6dcfb1e2886","testCaseStartedId":"9b0fe0c9-ff02-4eeb-b7dd-a9f4625e8112"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"2","nanos":54000000}},"timestam
