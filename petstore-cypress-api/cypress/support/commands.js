@@ -1,19 +1,29 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
+import { validator } from "../support/validator";
 
-import { validateSchema } from "../support/validateSchema";
+Cypress.Commands.add("schemaValidator", validator);
 
-// Validate schema
-Cypress.Commands.add("validateSchema", validateSchema);
+Cypress.Commands.add("deleteStoreOrderById", (id) => {
+    cy.request({
+        method: "DELETE",
+        failOnStatusCode: false,
+        url: `/store/order/${id}`,
+        headers: {
+            accept: "application/json"
+        }
+    })
+})
 
-// Post store order
+Cypress.Commands.add("getStoreOrderById", (id) => {
+    cy.request({
+        method: "GET",
+        failOnStatusCode: false,
+        url: `/store/order/${id}`,
+        headers: {
+            accept: "application/json"
+        }
+    })
+})
+
 Cypress.Commands.add("postStoreOrder", () => {
     cy.request({
         method: "POST",
@@ -33,36 +43,11 @@ Cypress.Commands.add("postStoreOrder", () => {
     })
 })
 
-// Get order by ID
-Cypress.Commands.add("getOrderById", (id) => {
-    cy.request({
-        method: "GET",
-        failOnStatusCode: false,
-        url: `/store/order/${id}`,
-        headers: {
-            accept: "application/json"
-        }
-    })
-})
-
-// Delete order by ID
-Cypress.Commands.add("deleteOrderById", (id) => {
-    cy.request({
-        method: "DELETE",
-        failOnStatusCode: false,
-        url: `/store/order/${id}`,
-        headers: {
-            accept: "application/json"
-        }
-    })
-})
-
-// Update user by username
-Cypress.Commands.add("updateUser", () => {
+Cypress.Commands.add("putUserByUsername", (username) => {
     cy.request({
         method: "PUT",
         failOnStatusCode: false,
-        url: `/user/klontongapp`,
+        url: `/user/${username}`,
         headers: {
             accept: "application/json"
         },

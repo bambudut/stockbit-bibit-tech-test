@@ -6,7 +6,7 @@ const getSchemaError = (getAjvError) => {
     );
 };
 
-export const validateSchema = (schema, response) => {
+export const validator = (schema, response) => {
     const ajv = new Ajv();
     const validate = ajv.compile(schema);
     const valid = validate(response);

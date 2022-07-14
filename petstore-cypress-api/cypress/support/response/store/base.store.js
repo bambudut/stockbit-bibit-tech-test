@@ -22,19 +22,3 @@ export const storeResponse = {
     },
     required: ["id", "petId", "status"],
 };
-
-export const generalResponse = {
-    type: "object",
-    properties: {
-        code: {
-            type: "number",
-        },
-        type: {
-            type: "string",
-        },
-        message: {
-            type: "string",
-        },
-    },
-    required: ["code"],
-};

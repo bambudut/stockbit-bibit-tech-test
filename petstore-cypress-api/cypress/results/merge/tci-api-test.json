@@ -1,0 +1,281 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-07-14T15:39:24.303Z",
+    "end": "2022-07-14T15:39:40.470Z",
+    "duration": 5765,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "88ba1506-5e58-46a1-a8f3-73df939a6676",
+      "title": "",
+      "fullFile": "cypress/integration/api/store/delete.storeOrderById.spec.js",
+      "file": "cypress/integration/api/store/delete.storeOrderById.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2d89e7a7-5a40-41ca-800e-1e856bd6cf0f",
+          "title": "Delete Order By ID",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Success Deleted Order",
+              "fullTitle": "Delete Order By ID Success Deleted Order",
+              "timedOut": null,
+              "duration": 2846,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.postStoreOrder().then(postStoreOrder => {\n  cy.deleteStoreOrderById(postStoreOrder.body.id).should(response => {\n    expect(response.status).to.eq(200);\n    expect(response.body.code).to.be.not.null;\n    expect(response.body).to.have.property(\"code\", 200);\n    cy.schemaValidator(_common.commonResponse, response.body);\n  });\n});",
+              "err": {},
+              "uuid": "81931e2b-8812-4ba9-9216-4c0fcf0191a2",
+              "parentUUID": "2d89e7a7-5a40-41ca-800e-1e856bd6cf0f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "81931e2b-8812-4ba9-9216-4c0fcf0191a2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2846,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "602854ec-80af-4b58-9ab0-480d8fe60e30",
+      "title": "",
+      "fullFile": "cypress/integration/api/store/get.storeOrderById.spec.js",
+      "file": "cypress/integration/api/store/get.storeOrderById.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "30d43fb4-0870-431f-a6f1-c912a76de1c4",
+          "title": "Get Order By ID",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Success Get Order ID",
+              "fullTitle": "Get Order By ID Success Get Order ID",
+              "timedOut": null,
+              "duration": 1206,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.postStoreOrder().then(postStoreOrder => {\n  cy.getStoreOrderById(postStoreOrder.body.id).should(response => {\n    expect(response.status).to.eq(200);\n    expect(response.body.id).to.be.not.null;\n    expect(response.body.petId).to.be.not.null;\n    expect(response.body.status).to.be.not.null;\n    expect(response.body).to.have.property(\"petId\", 9223372000001106341);\n    expect(response.body).to.have.property(\"status\", \"placed\");\n    cy.schemaValidator(_base.storeResponse, response.body);\n  });\n});",
+              "err": {},
+              "uuid": "3a923daf-16bb-400c-af7a-93ae42f89db6",
+              "parentUUID": "30d43fb4-0870-431f-a6f1-c912a76de1c4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3a923daf-16bb-400c-af7a-93ae42f89db6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1206,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "55bd48ea-ea71-48ad-ae4f-df4987ae3b29",
+      "title": "",
+      "fullFile": "cypress/integration/api/store/post.StoreOrder.spec.js",
+      "file": "cypress/integration/api/store/post.StoreOrder.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "74bedc41-fd7a-4c4e-a407-11e65d651583",
+          "title": "Post Store Order",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Success Create Order",
+              "fullTitle": "Post Store Order Success Create Order",
+              "timedOut": null,
+              "duration": 923,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.postStoreOrder().should(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body.id).to.be.not.null;\n  expect(response.body.petId).to.be.not.null;\n  expect(response.body.status).to.be.not.null;\n  expect(response.body).to.have.property(\"petId\", 9223372000001106341);\n  expect(response.body).to.have.property(\"status\", \"placed\");\n  cy.schemaValidator(_base.storeResponse, response.body);\n});",
+              "err": {},
+              "uuid": "77b75322-fb3e-4c78-b850-e7f2fde0872a",
+              "parentUUID": "74bedc41-fd7a-4c4e-a407-11e65d651583",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "77b75322-fb3e-4c78-b850-e7f2fde0872a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 923,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "8f403fca-6520-4309-b609-1ae5802b4442",
+      "title": "",
+      "fullFile": "cypress/integration/api/user/put.userByUsername.spec.js",
+      "file": "cypress/integration/api/user/put.userByUsername.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1b568096-80c5-42be-97dc-5ff2122cf355",
+          "title": "Update User Detail",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Success Updated User Data",
+              "fullTitle": "Update User Detail Success Updated User Data",
+              "timedOut": null,
+              "duration": 790,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.putUserByUsername(\"klontongapp\").should(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body.code).to.be.not.null;\n  expect(response.body).to.have.property(\"code\", 200);\n  cy.schemaValidator(_common.commonResponse, response.body);\n});",
+              "err": {},
+              "uuid": "5505d231-fd4a-47b6-be99-97cb0a3767b2",
+              "parentUUID": "1b568096-80c5-42be-97dc-5ff2122cf355",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5505d231-fd4a-47b6-be99-97cb0a3767b2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 790,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "spec-run-test",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "html": false,
+        "json": true,
+        "charts": true,
+        "overwrite": false,
+        "reportDir": "cypress/results/spec",
+        "reportFilename": "spec-run-test"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

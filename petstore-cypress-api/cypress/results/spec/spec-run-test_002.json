@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-04-20T15:49:23.482Z",
-    "end": "2022-04-20T15:49:26.380Z",
-    "duration": 2898,
+    "start": "2022-07-14T15:39:35.275Z",
+    "end": "2022-07-14T15:39:36.317Z",
+    "duration": 1042,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,49 +18,49 @@
   },
   "results": [
     {
-      "uuid": "13e0adb1-6c31-475b-9d5d-e26e90e3abc2",
+      "uuid": "55bd48ea-ea71-48ad-ae4f-df4987ae3b29",
       "title": "",
-      "fullFile": "cypress/integration/api/store.deleteOrder.spec.js",
-      "file": "cypress/integration/api/store.deleteOrder.spec.js",
+      "fullFile": "cypress/integration/api/store/post.StoreOrder.spec.js",
+      "file": "cypress/integration/api/store/post.StoreOrder.spec.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "fcceaffa-a2d0-422c-8b6c-29f0fbb48c81",
-          "title": "Delete Order By ID",
+          "uuid": "74bedc41-fd7a-4c4e-a407-11e65d651583",
+          "title": "Post Store Order",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Success Deleted Order",
-              "fullTitle": "Delete Order By ID Success Deleted Order",
+              "title": "Success Create Order",
+              "fullTitle": "Post Store Order Success Create Order",
               "timedOut": null,
-              "duration": 2834,
+              "duration": 923,
               "state": "passed",
               "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "cy.postStoreOrder().then(postStoreOrder => {\n  cy.deleteOrderById(postStoreOrder.body.id).should(response => {\n    expect(response.status).to.eq(200);\n    expect(response.body.code).to.be.not.null;\n    expect(response.body).to.have.property(\"code\", 200);\n    cy.validateSchema(_responseSchema.generalResponse, response.body);\n  });\n});",
+              "code": "cy.postStoreOrder().should(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body.id).to.be.not.null;\n  expect(response.body.petId).to.be.not.null;\n  expect(response.body.status).to.be.not.null;\n  expect(response.body).to.have.property(\"petId\", 9223372000001106341);\n  expect(response.body).to.have.property(\"status\", \"placed\");\n  cy.schemaValidator(_base.storeResponse, response.body);\n});",
               "err": {},
-              "uuid": "db70e7ea-6d92-46e5-bdf6-de27c41d1d5b",
-              "parentUUID": "fcceaffa-a2d0-422c-8b6c-29f0fbb48c81",
+              "uuid": "77b75322-fb3e-4c78-b850-e7f2fde0872a",
+              "parentUUID": "74bedc41-fd7a-4c4e-a407-11e65d651583",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "db70e7ea-6d92-46e5-bdf6-de27c41d1d5b"
+            "77b75322-fb3e-4c78-b850-e7f2fde0872a"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2834,
+          "duration": 923,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -83,7 +83,7 @@
     "mochawesome": {
       "options": {
         "quiet": false,
-        "reportFilename": "mochawesome",
+        "reportFilename": "spec-run-test",
         "saveHtml": false,
         "saveJson": true,
         "consoleReporter": "spec",
@@ -94,10 +94,12 @@
     },
     "marge": {
       "options": {
-        "reportDir": "cypress/results",
-        "overwrite": true,
         "html": false,
-        "json": true
+        "json": true,
+        "charts": true,
+        "overwrite": false,
+        "reportDir": "cypress/results/spec",
+        "reportFilename": "spec-run-test"
       },
       "version": "6.2.0"
     }

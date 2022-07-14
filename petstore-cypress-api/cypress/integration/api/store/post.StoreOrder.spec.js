@@ -1,4 +1,4 @@
-import { storeResponse } from '../../support/responseSchema'
+import { storeResponse } from '../../../support/response/store/base.store'
 
 describe('Post Store Order', () => {
     it('Success Create Order', () => {
@@ -9,7 +9,7 @@ describe('Post Store Order', () => {
             expect(response.body.status).to.be.not.null
             expect(response.body).to.have.property("petId", 9223372000001106341)
             expect(response.body).to.have.property("status", "placed")
-            cy.validateSchema(storeResponse, response.body)
+            cy.schemaValidator(storeResponse, response.body)
         })
     })
 });

@@ -3,9 +3,11 @@
     "video": false,
     "reporter": "mochawesome",
     "reporterOptions": {
-        "reportDir": "cypress/results",
-        "overwrite": true,
         "html": false,
-        "json": true
+        "json": true,
+        "charts": true,
+        "overwrite": false,
+        "reportDir": "cypress/results/spec",
+        "reportFilename": "spec-run-test"
     }
 }

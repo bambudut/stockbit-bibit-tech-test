@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-07-14T15:39:30.678Z",
+    "end": "2022-07-14T15:39:31.969Z",
+    "duration": 1291,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "602854ec-80af-4b58-9ab0-480d8fe60e30",
+      "title": "",
+      "fullFile": "cypress/integration/api/store/get.storeOrderById.spec.js",
+      "file": "cypress/integration/api/store/get.storeOrderById.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "30d43fb4-0870-431f-a6f1-c912a76de1c4",
+          "title": "Get Order By ID",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Success Get Order ID",
+              "fullTitle": "Get Order By ID Success Get Order ID",
+              "timedOut": null,
+              "duration": 1206,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.postStoreOrder().then(postStoreOrder => {\n  cy.getStoreOrderById(postStoreOrder.body.id).should(response => {\n    expect(response.status).to.eq(200);\n    expect(response.body.id).to.be.not.null;\n    expect(response.body.petId).to.be.not.null;\n    expect(response.body.status).to.be.not.null;\n    expect(response.body).to.have.property(\"petId\", 9223372000001106341);\n    expect(response.body).to.have.property(\"status\", \"placed\");\n    cy.schemaValidator(_base.storeResponse, response.body);\n  });\n});",
+              "err": {},
+              "uuid": "3a923daf-16bb-400c-af7a-93ae42f89db6",
+              "parentUUID": "30d43fb4-0870-431f-a6f1-c912a76de1c4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3a923daf-16bb-400c-af7a-93ae42f89db6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1206,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "spec-run-test",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "html": false,
+        "json": true,
+        "charts": true,
+        "overwrite": false,
+        "reportDir": "cypress/results/spec",
+        "reportFilename": "spec-run-test"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
